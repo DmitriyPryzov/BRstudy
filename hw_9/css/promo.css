@@ -1,0 +1,51 @@
+.promo-wrap {
+    display: flex;
+    margin-top: 30px;
+}
+
+.promo-text-block {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+}
+
+.promo-title {
+    font-size: 44px;
+    color: var(--main-text-color);
+    font-weight: 800;
+}
+
+.promo-desc {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.promo-start {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.promo__start-btn {
+    padding: 15px;
+}
+
+.promo__video-btn {
+    color: var(--btn-color);
+    font-weight: 600;
+}
+.promo__video-btn:visited {
+    color: var(--btn-color);
+}
+
+.promo-img-block {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+}

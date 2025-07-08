@@ -1,0 +1,51 @@
+@import url("./normalize.css");
+@import url("./root.css");
+@import url("./fonts.css");
+@import url("./header.css");
+@import url("./promo.css");
+@import url("./benefits.css");
+@import url("./present.css");
+@import url("./footer.css");
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+
+a, a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+.main {
+    width: 100%;
+}
+
+.container {
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+}    
+
+.orange-btn {
+    background-color: #FF9900;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.orange-btn:visited {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
