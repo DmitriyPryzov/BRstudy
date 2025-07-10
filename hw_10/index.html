@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>L8</title>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <section class="weather">
+                <h1 class="weather__title">Weather in real time</h1>
+                <div class="weather-switch-city">
+                    <div>
+                        <input type="radio" class="radio" value="ukr" id="ukr" name="switch-cities" checked>
+                        <label for="ukr">Україна</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" class="radio" value="world" id="world" name="switch-cities">
+                        <label for="world">Світ</label>
+                    </div>
+                </div>
+
+            <div class="weather-block">
+                <div id="loader" class="spinner"></div>
+                <ul class="weather-city-list">
+                </ul>
+                <p class="weather-desc">Have a nice day and don't forget umbrella if you are in New Delhi now!</p>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>

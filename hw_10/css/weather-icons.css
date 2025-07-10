@@ -54,21 +54,6 @@
 .wi-day-cloudy:before {
   content: "\f002";
 }
-.wi-day-cloudy-high:before {
-  content: "\f07d";
-}
-.wi-sleet:before {
-  content: "\f0b5";
-}
-.wi-day-haze:before {
-  content: "\f0b6";
-}
-.wi-day-snow-thunderstorm:before {
-  content: "\f06b";
-}
-.wi-hail:before {
-  content: "\f015";
-}
 .wi-day-sunny-overcast:before {
   content: "\f00c";
 }
@@ -78,4 +63,32 @@
 .wi-night-partly-cloudy:before {
   content: "\f083";
 }
+.wi-cloudy:before {
+  content: "\f013";
+}
+.wi-fog:before {
+  content: "\f014";
+}
+.wi-sprinkle:before {
+  content: "\f01c";
+}
+.wi-rain:before {
+  content: "\f019";
+}
+.wi-snow:before {
+  content: "\f01b";
+}
+.wi-showers:before {
+  content: "\f01a";
+}
+.wi-snow-wind:before {
+  content: "\f064";
+}
+.wi-thunderstorm:before {
+  content: "\f01e";
+}
+.wi-storm-showers:before {
+  content: "\f01d";
+}
+
 
