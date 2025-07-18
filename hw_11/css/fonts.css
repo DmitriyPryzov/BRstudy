@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Tourney';
+  src: url("../assets/fonts/Tourney_Condensed-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Staatliches';
+  src: url("../assets/fonts/Staatliches-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FrancoisOne';
+  src: url("../assets/fonts/FrancoisOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url("../assets/fonts/PTSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Farro';
+  src: url("../assets/fonts/Farro-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
