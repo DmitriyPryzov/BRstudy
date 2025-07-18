@@ -1,0 +1,143 @@
+@import url("./normalize.css");
+@import url("./fonts.css");
+@import url("./icons.css");
+
+
+body {
+    width: 100%;
+}
+
+.gallery {
+    width: 100%;
+    padding: 120px 0;
+}
+
+.gallery > section {
+    margin-top: 120px;
+}
+
+.gallery > section:first-child {
+    margin-top: 0;
+}
+
+.container {
+    width: 1100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery__title {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: "Delius", sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.gallery-photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 370px;
+    gap: 30px;
+    padding-top: 80px;
+}
+
+.gallery-photo__item {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.gallery-photo__item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0,rgba(36, 31, 36, 1) 0%, rgba(91, 91, 91, 0.45) 49%, rgba(0, 0, 0, 0.26) 100%);
+    transition: 0.2s;
+}
+
+.gallery-photo__item:hover::before {
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.gallery-photo__item:hover .icon {
+    display: block;
+}
+
+.gallery-photo__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-photo-actions, .gallery-photo-info  {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.gallery-photo-actions {
+    top: 0;
+    left: 0;
+}
+
+.icon {
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0E0E0;
+    color: #4F4F4F;
+    opacity: 0.5;
+    transition: .2s;
+    display: none;
+}
+
+.icon:hover {
+    opacity: 1;
+    transition: .2s;
+}
+
+.gallery-photo-info {
+    bottom: 0;
+    left: 0;
+}
+
+.two-col {
+    grid-column: span 2;
+}
+
+.two-row {
+    grid-row: span 2;
+}
+
+.one-row {
+    grid-row: span 1;
+}
