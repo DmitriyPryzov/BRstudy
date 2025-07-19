@@ -1,8 +1,11 @@
 @import url("./normalize.css");
 @import url("./fonts.css");
+@import url("./clients.css");
 
 body {
     width: 100%;
+    box-sizing: border-box;
+    position: relative;
 }
 
 a, a.visited {
@@ -17,13 +20,20 @@ code {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
+    min-width: 870px;
     display: block;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .header {
     width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 5;
 }
 
 .header-wrap {
@@ -64,12 +74,68 @@ code {
     margin: 0 10px;
 }
 
+.header-path__item > a:hover {
+    color: #f8c539;
+    transition: all 0.2s;
+}
+
 .header-path__item:last-child::after {
     content: "";
     display: block;
     margin: 0;
 }
 
+.article {
+    position: relative;
+}
+
+.article-back__img {
+    position: absolute;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+.article-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.article-nav {
+    flex: 1;
+    position: relative;
+}
+
+.article-nav nav {
+    position: sticky;
+    top: 157px;
+    left: 0;
+}
+
+.article-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.article-nav__item {
+    text-transform: uppercase;
+    margin-top: 70px;
+    font-size: 33px;
+    font-family: "FrancoisOne", sans-serif;
+    font-weight: 300;
+    padding: 10px 0;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.article-nav__item:first-child {
+    margin-top: 0;
+}
+
+.article-main {
+    flex: 2;
+}
 
 .article, .article-wrap {
     width: 100%;
@@ -100,9 +166,21 @@ code {
 .article__title {
     text-transform: uppercase;
     margin: 10px 0;
-    font-size: 33px;
+    font-size: 32px;
     font-family: "FrancoisOne", sans-serif;
     font-weight: 300;
+    position: relative;
+}
+
+.article__title::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 8px;
+    background-color: #000;
+
+    position: absolute;
+    top: -30px;
 }
 
 .article-text {

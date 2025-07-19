@@ -1,0 +1,80 @@
+@import url("./fonts.css");
+
+.clients {
+    padding: 70px 0;
+}
+
+.clients__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.clients__title::before {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 8px;
+    background-color: #000;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+
+.clients-cards {
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    width: 270px;
+    height: 180px;
+    perspective: 600px;
+}
+
+.card-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.card__front, .card__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+
+.card__front {
+    transform: rotateY(0);
+    background-color: #E6E6E6;
+}
+
+.card__back {
+    transform: rotateY(180deg);
+    background-color: #1A1A1A;
+}
+
+.card:hover .card-wrap {
+    transform: rotateY(-180deg);
+}
+
+.card__item > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+}
