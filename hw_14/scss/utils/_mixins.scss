@@ -1,0 +1,20 @@
+@use "./vars" as *;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-beetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin styles-label {
+    font-size: 15px;
+    color: $main-text-color;
+    margin: 0;
+    padding: 0;
+}

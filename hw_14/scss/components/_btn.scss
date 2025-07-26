@@ -1,0 +1,13 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.btn {
+    width: 100%;
+    display: block;
+    background-color: $btn-background;
+    color: $btn-color;
+    border-radius: 6px;
+    border: none;
+    padding: 8px 0;
+    cursor: pointer;
+}

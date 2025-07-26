@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Sign in</title>
+</head>
+<body>
+    <main class="main">
+
+        <div class="auth-wrap">
+
+            <form action="" class="auth-form">
+                
+                <div class="auth-form-header">
+                    <h2 class="auth-form__title">Create an Account</h2>
+                </div>
+
+                <div class="auth-form-body">
+
+                    <div>
+                        <div class="form-field">
+                            <label for="first-name" class="form-field__label">First Name</label>
+                            <input type="text" class="form-field__input" id="first-name" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="last-name" class="form-field__label">Last Name</label>
+                            <input type="text" class="form-field__input" id="last-name" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-field">
+                            <label for="email" class="form-field__label">E-mail</label>
+                            <input type="email" class="form-field__input" id="email" required>
+                            <span class="small-text">We'll never share your email with anyone else.</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="radio-group">
+                            <div class="form-radio">
+                                <input type="radio" class="form-radio__radio" id="male" name="gender">
+                                <label for="male" class="form-radio__label">Male</label>
+                            </div>
+
+                            <div class="form-radio">
+                                <input type="radio" class="form-radio__radio" id="female" name="gender">
+                                <label for="female" class="form-radio__label">Female</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-field">
+                            <label for="country" class="form-field__label">Country</label>
+                            <div class="select-wrap">
+                                <select id="country" class="form-field__input select">
+                                    <option value="" selected disabled hidden>Select</option>
+                                    <option value="ukr">Україна</option>
+                                    <option value="pl">Польща</option>
+                                    <option value="de">Німеччина</option>
+                                    <option value="cz">Чехія</option>
+                                    <option value="md">Молдова</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="city" class="form-field__label">City</label>
+                            <input type="text" class="form-field__input" id="city">
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="btn">Sign Up</button>
+                    </div>
+                    <div>
+                        <p class="small-text center wrap">By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-form-footer">
+                    <div class="log-in-link">
+                        <span class="log-in-link__text">Have an account?</span>
+                        <a href="#" class="log-in-link__link">Log In</a>
+                    </div>
+                </div>
+
+            </form>
+
+            <form action="" class="auth-form">
+                <div class="auth-form-header">
+                    <h2 class="auth-form__title">Profile</h2>
+                </div>
+
+                <div class="auth-form-body">
+
+                    <div>
+
+                        <div class="auth-form-img-block">
+
+                            <div class="auth-form__img">
+                                <img src="./assets/img/user.png" alt="photo">
+                            </div>
+
+                            <div class="auth-form-load">
+                                <div>
+                                    <div class="form-field">
+                                        <input type="file" class="upload-file" id="upload">
+                                        <label class="form-field__input upload" for="upload">Upload</label>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="auth-form__remove-btn"><img src="./assets/img/Trash.svg" alt=""></a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="small-text">Up to 1 MB (300x300 px)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-field">
+                            <label for="name-prof" class="form-field__label">Name</label>
+                            <input type="text" class="form-field__input" id="name-prof">
+                        </div>
+                        <div class="form-field">
+                            <label for="email-prof" class="form-field__label">E-mail</label>
+                            <input type="email" class="form-field__input" id="email-prof">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-field">
+                            <label for="country-prof" class="form-field__label">Country</label>
+                            <div class="select-wrap">
+                                <select id="country-prof" class="form-field__input select">
+                                    <option value="" selected disabled hidden>Select</option>
+                                    <option value="ukr">Україна</option>
+                                    <option value="pl">Польща</option>
+                                    <option value="de">Німеччина</option>
+                                    <option value="cz">Чехія</option>
+                                    <option value="md">Молдова</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="city-prof" class="form-field__label">City</label>
+                            <input type="text" class="form-field__input" id="city-prof">
+                        </div>
+                    </div>  
+                    
+                    <div>
+                        <div class="form-field">
+                            <label for="zip-code" class="form-field__label">Zip Code</label>
+                            <input type="text" class="form-field__input" id="zip-code">
+                        </div>
+                        <div class="form-field">
+                            <label for="tell" class="form-field__label">Phone Number</label>
+                            <input type="tel" class="form-field__input" id="tell" pattern="^\+380\d{9}$" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="update-btn"><button class="btn">Update</button></div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </main>
+</body>
+</html>
