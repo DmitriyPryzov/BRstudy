@@ -1,0 +1,360 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  text-transform: none;
+}
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  text-transform: none;
+}
+
+h4 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: none;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+body main {
+  width: 100%;
+  height: 100%;
+}
+body .container {
+  width: 1200px;
+  height: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+body .bonfire {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+body .bonfire::before, body .bonfire::after {
+  content: "";
+  display: block;
+  width: 210px;
+  height: 1px;
+  background-color: #FFCC00;
+}
+body .icon-block-list {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+body .icon-block__item {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #CCCCCC;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .icon-block__item a {
+  color: #CCCCCC;
+}
+body .btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #666666;
+  border: 1px solid #FFCC00;
+  padding: 5px 10px;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../assets/fonts/icomoon.eot?ou9958");
+  src: url("../assets/fonts/icomoon.eot?ou9958#iefix") format("embedded-opentype"), url("../assets/fonts/icomoon.ttf?ou9958") format("truetype"), url("../assets/fonts/icomoon.woff?ou9958") format("woff"), url("../assets/fonts/icomoon.svg?ou9958#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-x:before {
+  content: "\e900";
+}
+
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-linkedin:before {
+  content: "\eaca";
+}
+
+.cv {
+  width: 100%;
+  height: 100%;
+}
+.cv-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.cv-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cv__subtitle {
+  color: #898F8F;
+}
+.cv__title {
+  color: #FFCC00;
+}
+.cv-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.cv-photo-block {
+  flex: 1 1 400px;
+  padding: 65px 65px 65px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cv-photo-border {
+  border: 1px solid #FFCC00;
+  padding: 15px;
+  max-width: 400px;
+  max-height: 400px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+.cv-photo-border:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(110%) rotate(45deg);
+  z-index: 2;
+}
+.cv-photo-border img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  z-index: 3;
+  position: relative;
+  border: 1px solid #FFCC00;
+}
+.cv-info-block {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  z-index: 9;
+  padding: 65px 0 65px 65px;
+  border-left: 1px solid #FFCC00;
+}
+.cv-title {
+  color: #666666;
+}
+.cv-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: #FFCC00;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.cv__profession {
+  color: #666666;
+}
+.cv-p-block {
+  position: relative;
+}
+.cv-p-block::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #FFCC00;
+  margin: 20px auto;
+}
+.cv-p-block::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 20px;
+  border: 5px solid #fff;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 10;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.cv__p {
+  text-align: center;
+  width: 100%;
+  max-width: 460px;
+}
+
+/*# sourceMappingURL=main.css.map */

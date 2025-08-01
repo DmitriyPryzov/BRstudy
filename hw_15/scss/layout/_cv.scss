@@ -1,0 +1,118 @@
+@use "../utils/mixins" as *;
+@use "../utils/vars" as *;
+
+.cv {
+    width: 100%;
+    height: 100%;
+
+    &-wrap {
+        @include flex();
+        height: 100%;
+    }
+
+    &-header {
+        width: 100%;
+        @include flex(column, flex-start, center);
+    }
+
+    &__subtitle {
+        color: $subtitle-color;
+    }
+
+    &__title {
+        color: $main-color;
+    }
+
+    &-body {
+        @include flex(row, center, flex-start); 
+        flex-wrap: wrap;
+    }
+
+    &-photo-block {
+        flex: 1 1 400px;
+        padding: 65px 65px 65px 0;
+        @include flex();
+    }
+
+    &-photo-border {
+        border: 1px solid $main-color;
+        padding: 15px;
+        max-width: 400px;
+        max-height: 400px;
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+
+        &:after {
+            @include line(100%, 100%, #fff);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scale(110%) rotate(45deg);
+            z-index: 2;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            z-index: 3;
+            position: relative;
+            border: 1px solid $main-color;
+        }
+    }
+
+    &-info-block {
+        flex: 1 1 400px;
+        @include flex(column, center, center);
+        gap: 30px;
+        z-index: 9;
+        padding: 65px 0 65px 65px;
+        border-left: 1px solid $main-color;
+    }
+
+    &-title {
+        color: $text-color;
+        &::after {
+            @include line(100px, 1px, $main-color);
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    }
+
+    &__profession {
+        color: $text-color;
+    }
+
+    &-p-block {
+        position: relative;
+
+        &::after {
+            @include line(50px, 4px, $main-color);
+            margin: 20px auto;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 20px;
+            border: 5px solid #fff;
+            margin: 0 auto;
+            position: absolute;
+            z-index: 10;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+
+    &__p {
+        text-align: center;
+        width: 100%;
+        max-width: 460px;
+    }
+
+
+}

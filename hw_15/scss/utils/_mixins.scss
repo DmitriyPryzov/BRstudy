@@ -1,0 +1,23 @@
+@use "./vars" as *;
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin font($name: "Roboto", $weight: 500, $size: 20px, $transform: none) {
+    font-family: $name;
+    font-weight: $weight;
+    font-size: $size;
+    text-transform: $transform;
+}
+
+@mixin line($width: 10px, $height: 1px, $color: $main-color) {
+    content: "";
+    display: block;
+    width: $width;
+    height: $height;
+    background-color: $color;
+}

@@ -1,0 +1,65 @@
+@use "../utils/mixins" as *;
+@use "../utils/vars" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    main {
+       width: 100%;
+       height: 100%;
+    }
+
+    .container {
+        width: 1200px;
+        height: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+
+    .bonfire {
+        padding: 40px 0;
+        @include flex(row, center, center);
+        gap: 10px;
+
+
+        &::before, &::after {
+            @include line(210px);
+        }
+    }
+
+    .icon-block {
+        &-list {
+            width: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            @include flex(row, space-between, center);
+            gap: 5px;
+        }
+
+        &__item {
+            width: 30px;
+            height: 30px;
+            border: 2px solid $icon-color;
+            border-radius: 50%;
+            @include flex();
+
+            a {
+                color: $icon-color;
+            }
+        }
+    }
+
+    .btn {
+        @include font($font-main, 700, 14px, uppercase);
+        color: $text-color;
+        border: 1px solid $main-color;
+        padding: 5px 10px;
+    }
+}

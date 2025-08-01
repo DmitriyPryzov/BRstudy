@@ -1,0 +1,47 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../assets/fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+    @include font($font-main, 700, 60px, uppercase);
+}
+
+h2 {
+    @include font($font-main, 800, 36px);
+}
+
+h3 {
+    @include font($font-second, 300, 24px); 
+}
+
+h4 {
+    @include font($font-second, 300, 18px, uppercase);
+}
+
+p {
+    @include font($font-second, 500, 14px);
+}
+
+a, a:visited {
+    text-decoration: none;
+}
