@@ -1,0 +1,8 @@
+@use "./vars" as *;
+
+.header {
+    width: 100%;
+    padding: 22px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid $header-border;
+}

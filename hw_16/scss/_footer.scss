@@ -1,0 +1,12 @@
+@use "./mixins" as *;
+@use "./vars" as *;
+
+.footer {
+    box-sizing: border-box;
+    padding: 40px 0;
+    background-color: $footer-background;
+
+    .icons {
+        margin-top: 40px;
+    }
+}

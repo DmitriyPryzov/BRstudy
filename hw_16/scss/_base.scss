@@ -1,0 +1,98 @@
+@use "./mixins" as *;
+@use "./vars" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body  {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    flex-grow: 1;
+    @include flex();
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: $link-color;
+    display: block;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.icon-social {
+    width: 20px;
+    height: 20px;
+}
+
+
+.title {
+    @include font("NunitoSans", 600, 40px);
+    color: $title-color;
+}
+
+.subtitle {
+    @include font("Roboto", 500, 16px);
+    color: $subtitle-color;
+}
+
+
+.logo {
+    @include flex(row, flex-start, center);
+    gap: 10px;
+
+    > img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    &__text {
+        color: #000;
+        @include font("Quicksand", 500, 35px);
+    }
+
+    .white { 
+        color: #FFFFFF;
+    }
+}
+
+.icons {
+    &-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include flex(row, flex-start, center);
+        gap: 10px;
+
+        &__item {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+
+            &:hover .icon-social {
+                fill: $experience-hover-border;
+            }
+            
+            a {
+                @include flex();
+                width: 100%;
+                height: 100%;
+
+
+            }
+
+            background-color: $icon-block-backround;
+        }
+
+    }
+}

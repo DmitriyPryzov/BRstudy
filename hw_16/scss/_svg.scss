@@ -1,0 +1,42 @@
+.color-1 {
+    fill: #D1E7FF;
+}
+
+.color-2 {
+    fill: #B9DCFF;
+}
+.color-3 {
+    fill: #E8F3FF;
+}
+
+.color-4 {
+    fill: #fff;
+}
+
+.color-5 {
+    fill: #007FFC;
+}
+
+.color-1, .color-2, .color-3, .color-4, .color-5 {
+    transition: all 0.3s;
+}
+
+.experience-list__item:hover .color-1 {
+    fill: #E1F4F5;
+    transition: all 0.3s;
+}
+
+.experience-list__item:hover .color-2 {
+    fill: #CAEFF2;
+    transition: all 0.3s;
+}
+
+.experience-list__item:hover .color-3 {
+    fill: #F4FEFF;
+    transition: all 0.3s;
+}
+
+.experience-list__item:hover .color-5 {
+    fill: #52C29D;
+    transition: all 0.3s;
+}

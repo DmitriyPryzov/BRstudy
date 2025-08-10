@@ -1,0 +1,324 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NunitoSans";
+  src: url("../assets/fonts/NunitoSans.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../assets/fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+.color-1 {
+  fill: #D1E7FF;
+}
+
+.color-2 {
+  fill: #B9DCFF;
+}
+
+.color-3 {
+  fill: #E8F3FF;
+}
+
+.color-4 {
+  fill: #fff;
+}
+
+.color-5 {
+  fill: #007FFC;
+}
+
+.color-1, .color-2, .color-3, .color-4, .color-5 {
+  transition: all 0.3s;
+}
+
+.experience-list__item:hover .color-1 {
+  fill: #E1F4F5;
+  transition: all 0.3s;
+}
+
+.experience-list__item:hover .color-2 {
+  fill: #CAEFF2;
+  transition: all 0.3s;
+}
+
+.experience-list__item:hover .color-3 {
+  fill: #F4FEFF;
+  transition: all 0.3s;
+}
+
+.experience-list__item:hover .color-5 {
+  fill: #52C29D;
+  transition: all 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #3DB370;
+  display: block;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.icon-social {
+  width: 20px;
+  height: 20px;
+}
+
+.title {
+  font-family: "NunitoSans";
+  font-weight: 600;
+  font-size: 40px;
+  text-transform: none;
+  color: #000;
+}
+
+.subtitle {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: none;
+  color: #7690A8;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.logo > img {
+  max-width: 30px;
+  max-height: 30px;
+}
+.logo__text {
+  color: #000;
+  font-family: "Quicksand";
+  font-weight: 500;
+  font-size: 35px;
+  text-transform: none;
+}
+.logo .white {
+  color: #FFFFFF;
+}
+
+.icons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.icons-list__item {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #EFEEF3;
+}
+.icons-list__item:hover .icon-social {
+  fill: #3DB370;
+}
+.icons-list__item a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  padding: 22px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #EFEEF3;
+}
+
+.experience {
+  width: 100%;
+  padding: 30px 0;
+}
+.experience-body {
+  margin-top: 40px;
+}
+.experience-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.experience-list__item {
+  width: 100%;
+  flex: 1;
+  flex-basis: 300px;
+  padding: 40px;
+  border: 1px solid #E5EAF4;
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+.experience-list__item:hover {
+  border: 1px solid #3DB370;
+  transition: all 0.3s;
+}
+.experience-list__img {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #E5EAF4;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.experience-list__title {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: none;
+  margin-top: 30px;
+}
+.experience-list__text {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: none;
+  margin-top: 15px;
+}
+.experience-list__link {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: none;
+  margin-top: 30px;
+}
+.experience-icon {
+  width: 39px;
+  height: 36px;
+}
+
+.footer {
+  box-sizing: border-box;
+  padding: 40px 0;
+  background-color: #16133D;
+}
+.footer .icons {
+  margin-top: 40px;
+}
+
+/*# sourceMappingURL=main.css.map */
