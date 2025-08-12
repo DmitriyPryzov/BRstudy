@@ -1,0 +1,83 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: $nav-text-color;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    @media(max-width: $bp-mobile) {
+        padding: 0 10px;
+    }
+}
+
+.icon {
+    width: 17px;
+    height: 16px;
+}
+
+.burger {
+    width: 34px;
+    height: 2px;
+
+    background-color: #000;
+    position: relative;
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: $bp-tablet) {
+        display: block;
+    }
+
+    &::before {
+        content: "";
+        width: 34px;
+        height: 2px;
+        display: block;
+        background-color: #000;
+        position: absolute;
+        top: -10px;
+        left: 0;
+    }
+
+    &::after {
+        content: "";
+        width: 34px;
+        height: 2px;
+        display: block;
+        background-color: #000;
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+}
+
+#burger-check:checked ~ .header-nav {
+    transform: translateX(0);
+}
+
+a.btn {
+    width: 180px;
+    height: 46px;
+
+    background-color: $btn-background;
+    color: $btn-color;
+    letter-spacing: 3px;
+
+    @include flex();
+    @include font("Lato", 500, 16px);
+}
+

@@ -1,0 +1,92 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.header {
+    &-wrap {
+        width: 100%;
+        padding: 44px 0;
+        @include flex(row, space-between, center);
+        gap: 10px;
+        
+        @media(max-width: $bp-tablet) {
+            position: sticky;
+            z-index: 100;
+        }
+
+        @media(max-width: $bp-mobile) {
+            padding: 24px 0;
+        }
+    }
+
+    .navigation {
+        @include flex();
+        gap: 85px;
+
+        @media (max-width: 890px) {
+            gap: 50px;
+        }
+
+        @media(max-width: $bp-mobile) {
+            gap: 20px;
+        }
+    }
+
+    &-nav {
+        @include flex();
+        gap: 42px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @media (max-width: 890px) {
+            gap: 22px;
+        }
+
+        @media (max-width: $bp-tablet) {
+            // display: none;
+
+            flex-direction: column;
+            gap: 50px;
+            height: 100%;
+            width: 300px;
+
+            z-index: -1;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: #fff;
+            transform: translateX(300px);
+            transition: all 0.3s;
+
+        }
+
+        &__item {
+            @include font("Lato", 400, 14px, uppercase);
+            letter-spacing: 3px;
+            line-height: 0;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                &::after {
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    width: 70%;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #000;
+                }
+                
+            }
+        }
+    }
+
+    &__find {
+        width: 17px;
+        height: 16px;
+    }
+
+}

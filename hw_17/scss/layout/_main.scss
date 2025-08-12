@@ -1,0 +1,248 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.section {
+    &-padding {
+        padding: 90px 0;
+    }
+
+    &-header {
+        @include flex(row, space-between, center);
+    }
+
+    &-body {
+        padding-top: 50px;
+    }
+}
+
+a.view-all {
+    color: $post-subtitle-color;
+    @include font("Lato", 400, 16px);
+}
+
+.arrow {
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 23px;
+        height: 10px;
+        background-image: url("../assets/img/icons/arrow.svg");
+        background-repeat: no-repeat; 
+        background-position: center; 
+        background-size: contain; 
+        margin-left: 20px;
+        vertical-align: middle; 
+    }
+}
+
+.main {
+    width: 100%;
+    min-height: 600px;
+    background-image: url("../assets/img/bg-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 100px;
+
+    &__title {
+        display: block;
+        @include font("RedHatDisplay", 500, 48px);  
+        max-width: 770px;
+
+        @media (max-width: $bp-tablet) {
+            font-size: 36px;
+        }
+
+        @media (max-width: $bp-mobile) {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+        min-height: 320px;
+        padding: 20px;
+    }
+
+    @media (max-width: $bp-mobile) {
+        min-height: 500px;
+        padding: 70px 10px;
+    }
+}
+
+
+.blog {
+    
+    .section-body {
+        @include flex(column);
+        gap: 50px;
+    }
+
+    .post {
+        @include flex();
+        
+        @media (max-width: $bp-tablet) {
+            gap: 20px;
+        }
+
+        @media (max-width: $bp-mobile) {
+                @include flex(column);
+        }
+
+        &:nth-child(odd) {
+
+            @media (max-width: $bp-mobile) {
+                @include flex(column-reverse);
+            }
+        }
+
+        &__subtitle {
+            font-size: 16px;
+        }
+
+        &__img {
+            min-height: 470px;
+
+            @media (max-width: $bp-tablet) {
+                min-height: 340px;
+            }
+        }
+
+        &__title {
+            margin-top: 30px;
+        }
+
+        &__subtitle {
+            margin-top: 15px;
+        }
+
+        &__text {
+            margin-top: 50px;
+        }
+    }
+}
+
+.latest, .popular {
+
+    .section-body {
+        @include flex(row, center, flex-start);
+        gap: 30px;
+    }
+
+    .post {
+        @include flex(column);
+        gap: 25px;
+
+        &__title {
+            margin-top: 25px;
+        }
+
+        &__subtitle {
+            margin-top: 15px;
+
+            @media (max-width: $bp-mobile) {
+                font-size: 16px;
+            }
+        }
+
+        &__text {
+            margin-top: 20px;
+        }
+    }
+}
+
+.latest {
+    .section-body {
+        @media (max-width: $bp-tablet) {
+            @include flex(column, center, flex-start);
+        }
+    }
+
+    .post {
+        @media (max-width: $bp-tablet) {
+            @include flex(row, flex-start, flex-start);
+        }
+
+        @media (max-width: $bp-mobile) {
+            @include flex(column, center, center);
+        }
+
+        &:nth-child(even) {
+            @media (max-width: $bp-tablet) {
+                flex-direction: row-reverse;
+            }
+
+            @media (max-width: $bp-mobile) {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.popular {
+    .btn {
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+
+    .section-body {
+        @media (max-width: $bp-mobile) {
+            @include flex(column);
+        }
+    }
+}
+
+.vacancy {
+
+    &-title {
+        @include font("RedHatDisplay", 400, 23px);
+        letter-spacing: 2px;
+
+        @media (max-width: $bp-mobile) {
+            font-size: 24px;
+        }
+    }
+    
+    .section-body {
+        @include flex(row, space-between, flex-start);
+
+        @media (max-width: $bp-tablet) {
+            @include flex(column, flex-start, flex-start);
+            gap: 50px;
+        }
+    }
+
+    .thin-title, .vacancy-text-block {
+        max-width: 470px;
+
+        @media (max-width: $bp-tablet) {
+            max-width: 100%;
+        }
+    }
+
+    &-text-block {
+        @include font("Lato", 400, 19px);
+        color: $post-subtitle-color;
+
+        @include flex(column);
+        gap: 50px;
+        width: 100%;
+        display: block;
+
+        @media (max-width: $bp-tablet) {
+            text-align: right;
+            padding-left: 100px;
+        }
+
+        @media (max-width: $bp-tablet) {
+            text-align: left;
+            padding-left: 0;
+        }
+    }
+    
+}
+

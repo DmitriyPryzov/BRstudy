@@ -1,0 +1,17 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+
+.title {
+    @include font("RedHatDisplay", 400, 48px);
+    letter-spacing: 3px;
+
+    @media (max-width: $bp-mobile) {
+        margin: 0 auto;
+    }
+}
+
+.subtitle {
+    @include font("RedHatDisplay", 400, 28px);
+    letter-spacing: 3px;
+}
