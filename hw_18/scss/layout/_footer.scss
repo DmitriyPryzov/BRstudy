@@ -1,0 +1,85 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+
+.footer {
+    background-color: $footer-background;
+    &-wrap {
+        @include flex(column);
+        padding: 70px 0 30px 0;
+    }
+
+    &-content {
+        width: 100%;
+        @include flex(row, space-between, center);
+
+        @media (max-width: $bp-tablet) {
+            @include flex(column);
+            gap: 50px;        }
+    }
+
+    &-info {
+        @include flex(column, center, flex-start);
+        gap: 15px;
+
+        @media (max-width: $bp-tablet) {
+            @include flex(column);
+        }
+    }
+
+    &-title {
+        @include font("Lato", 400, 48px);
+        letter-spacing: 2px;
+
+        @media (max-width: $bp-mobile) {
+            font-size: 32px;
+        }
+    }
+
+    &-subtitle {
+        @include font("Lato", 400, 16px);
+        letter-spacing: 2px;
+
+    }
+
+    &-icons {
+        @include flex();
+        gap: 23px;
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            width: 50px;
+            height: 50px;
+
+            border: 1px solid $btn-background;
+
+            @include flex();
+            transition: all 0.3s;
+
+            &:hover {
+                .footer-icon {
+                    fill: #fff;
+                    transition: all 0.3s;
+                }
+                background-color: $btn-background;
+                transition: all 0.3s;
+            }
+
+        }
+
+    }
+
+    &-icon {
+        width: 24px;
+        height: 24px;
+
+        fill: $btn-background;
+    }
+
+    &-copyright {
+        @include font("Lato", 400, 12px);
+        color: $nav-text-color;
+        margin-top: 20px;
+    }
+}

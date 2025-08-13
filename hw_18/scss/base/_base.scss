@@ -1,0 +1,38 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: $nav-text-color;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    @media(max-width: $bp-mobile) {
+        padding: 0 10px;
+    }
+}
+
+.icon {
+    width: 17px;
+    height: 16px;
+}
+
+.logo {
+    @include font("Lato", 400, 16px, uppercase);
+    letter-spacing: 7px;
+}
+
+
+

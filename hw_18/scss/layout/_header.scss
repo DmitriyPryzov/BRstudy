@@ -1,0 +1,11 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.header {
+    &-wrap {
+        width: 100%;
+        padding: 44px 0;
+        @include flex(row, space-between, center);
+        gap: 10px;
+    }
+}

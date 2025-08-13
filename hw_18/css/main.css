@@ -1,0 +1,386 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Regular.eot");
+  src: url("../assets/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Lato-Regular.woff") format("woff"), url("../assets/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Medium.eot");
+  src: url("../assets/fonts/Lato-Medium.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Lato-Medium.woff") format("woff"), url("../assets/fonts/Lato-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url("../assets/fonts/RedHatDisplay-Medium.eot");
+  src: url("../assets/fonts/RedHatDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/RedHatDisplay-Medium.woff2") format("woff2"), url("../assets/fonts/RedHatDisplay-Medium.woff") format("woff"), url("../assets/fonts/RedHatDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url("../assets/fonts/RedHatDisplay-Bold.eot");
+  src: url("../assets/fonts/RedHatDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/RedHatDisplay-Bold.woff2") format("woff2"), url("../assets/fonts/RedHatDisplay-Bold.woff") format("woff"), url("../assets/fonts/RedHatDisplay-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.title {
+  font-family: "RedHatDisplay";
+  font-weight: 400;
+  font-size: 48px;
+  text-transform: none;
+  letter-spacing: 3px;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 33px;
+  }
+}
+@media (max-width: 460px) {
+  .title {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+@media (max-width: 460px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.icon {
+  width: 17px;
+  height: 16px;
+}
+
+.logo {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.header-wrap {
+  width: 100%;
+  padding: 44px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-padding {
+  padding: 90px 0;
+}
+
+.section-padding {
+  padding: 90px 0;
+}
+.section-b-padding {
+  padding-bottom: 90px;
+}
+.section-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-body {
+  padding-top: 50px;
+}
+
+.blog .section-body, .article .section-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.blog .post, .article .post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .blog .post, .article .post {
+    gap: 20px;
+  }
+}
+@media (max-width: 460px) {
+  .blog .post, .article .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.blog .post__subtitle, .article .post__subtitle {
+  font-size: 16px;
+}
+.blog .post__title, .article .post__title {
+  margin-top: 30px;
+}
+.blog .post__subtitle, .article .post__subtitle {
+  margin-top: 15px;
+}
+.blog .post__text, .article .post__text {
+  margin-top: 50px;
+  max-width: 570px;
+}
+@media (max-width: 768px) {
+  .blog .post__text, .article .post__text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 460px) {
+  .blog .post__text, .article .post__text {
+    font-size: 16px;
+  }
+}
+
+.article .section-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.article .post__text {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.footer {
+  background-color: #F4F4F4;
+}
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0 30px 0;
+}
+.footer-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+}
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.footer-title {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 48px;
+  text-transform: none;
+  letter-spacing: 2px;
+}
+@media (max-width: 460px) {
+  .footer-title {
+    font-size: 32px;
+  }
+}
+.footer-subtitle {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 2px;
+}
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+  margin: 0;
+  padding: 0;
+}
+.footer-icons__item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #565656;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+.footer-icons__item:hover {
+  background-color: #565656;
+  transition: all 0.3s;
+}
+.footer-icons__item:hover .footer-icon {
+  fill: #fff;
+  transition: all 0.3s;
+}
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  fill: #565656;
+}
+.footer-copyright {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: none;
+  color: #000;
+  margin-top: 20px;
+}
+
+.post {
+  width: 100%;
+}
+.post-img-block {
+  height: 100%;
+  width: 100%;
+}
+.post-img-block > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post-info {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.post__title {
+  font-family: "RedHatDisplay";
+  font-weight: 500;
+  font-size: 23px;
+  text-transform: none;
+  color: #000;
+  letter-spacing: 1px;
+  display: block;
+}
+.post__text {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 19px;
+  text-transform: none;
+  color: #7B7B7B;
+}
+
+/*# sourceMappingURL=main.css.map */

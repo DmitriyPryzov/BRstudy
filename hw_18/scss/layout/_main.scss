@@ -1,0 +1,85 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.section {
+    &-padding {
+        padding: 90px 0;
+    }
+
+    &-b-padding {
+        padding-bottom: 90px;
+    }
+
+    &-header {
+        @include flex(row, space-between, center);
+    }
+
+    &-body {
+        padding-top: 50px;
+    }
+}
+
+
+.blog, .article {
+    
+    .section-body {
+        @include flex(column);
+        gap: 50px;
+    }
+
+    .post {
+        @include flex(column);
+        
+        @media (max-width: $bp-tablet) {
+            gap: 20px;
+        }
+
+        @media (max-width: $bp-mobile) {
+                @include flex(column);
+        }
+
+        &__subtitle {
+            font-size: 16px;
+        }
+
+        &__title {
+            margin-top: 30px;
+        }
+
+        &__subtitle {
+            margin-top: 15px;
+        }
+
+        &__text {
+            margin-top: 50px;
+            max-width: 570px;
+
+            @media (max-width: $bp-tablet) {
+                max-width: 100%;
+            }
+
+            @media (max-width: $bp-mobile) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.article {
+    .section-body {
+        @include flex(column);
+        gap: 50px;
+    }
+
+    .post {
+        &__text {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    }
+}
+

@@ -1,0 +1,17 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+
+.title {
+    @include font("RedHatDisplay", 400, 48px);
+    letter-spacing: 3px;
+
+    @media (max-width: $bp-tablet) {
+        font-size: 33px;
+    }
+
+    @media (max-width: $bp-mobile) {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+}

@@ -1,0 +1,36 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.post {
+    width: 100%;
+
+    &-img-block {
+        height: 100%;
+        width: 100%; 
+
+        > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-info {
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__title {
+        @include font("RedHatDisplay", 500, 23px);
+        color: $post-title-color;
+        letter-spacing: 1px;
+        display: block;
+    }
+
+    &__text {
+        @include font("Lato", 400, 19px);
+        color: $post-subtitle-color;
+    }
+}
