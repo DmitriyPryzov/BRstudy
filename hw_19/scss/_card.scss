@@ -50,3 +50,10 @@
             transition: all 0.6s;
         }
 }
+
+.card.true {
+    .card-wrap {
+            transform: rotateY(180deg);
+            transition: all 0.6s;
+        }
+}

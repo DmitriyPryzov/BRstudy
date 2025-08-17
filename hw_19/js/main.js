@@ -29,7 +29,7 @@ deck.addEventListener("click", (e) => {
 
     const target = e.target.closest(".card");
 
-    if (target) {
+    if (target && !target.classList.contains("select")) {
         const id = target.dataset.id;
         target.classList.add("select");
 
