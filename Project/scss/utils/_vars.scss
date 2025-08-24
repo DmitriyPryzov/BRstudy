@@ -1,0 +1,41 @@
+:root {
+    --main-background: #fff;
+    --main-img: url("../assets/img/first-screen/first-screen-base.webp");
+    --nav-underline: #F1897B;
+    --text-color: #262A3F;
+    --italic-text-color: #85BBB1;
+    --btn-color: #F1897B;
+    --btn-color-hover: #E54F3A;
+    --btn-border: #E4E4E4;
+    --play-btn-background: rgb(88, 98, 145, 0.5);
+    --play-triangle-fill: #262A3F;
+    --review-text-color: #fff;
+    --header-gradient: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0.8) 100%);
+    --benefits-bg: #E4E4E4;
+}
+
+.dark {
+    --main-background: #161926;
+    --main-img: url("../assets/img/first-screen/first-screen-dark-base.webp");
+    --nav-underline: linear-gradient(90deg,rgba(83, 243, 205, 1) 33%, rgba(83, 243, 205, 0) 100%);
+    --text-color: #ffffff;
+    --italic-text-color: #689FF2;
+    --btn-color: #53F3CD;
+    --btn-color-hover: #02E0AB;
+    --btn-border: #E4E4E4;
+    --play-btn-background: rgb(88, 98, 145, 0.5);
+    --play-triangle-fill: #262A3F;
+    --header-gradient: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%);
+    --benefits-bg: #0f111a;
+}
+
+
+$header-blur: 9px;
+$stat-line: #85BBB1;
+$base-line: #E4E4E4;
+
+
+
+$bp-mobile: 490px;
+$bp-tablet: 768px;
+$bp-desktop: 1200px;

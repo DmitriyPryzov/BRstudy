@@ -1,0 +1,143 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.stats {
+    width: 100%;
+    
+
+    &-wrap {
+        position: relative;
+        box-sizing: border-box;
+        
+        display: grid;
+        grid-template-columns: 570px 1fr;
+
+        @media (max-width: $bp-tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-img-container {
+
+       @media (max-width: $bp-tablet) {
+            max-height: 500px;
+            overflow: hidden;
+        }
+
+        >img {
+            @media (max-width: $bp-tablet) {
+                width: 100%;
+                height: auto;
+
+
+                object-fit: cover; 
+                display: block;
+            }
+        }
+    }
+
+    &-block {
+        width: 80%;
+        padding: 45px 20px;
+        display: flex;
+        gap: 10px;
+        justify-self: end;
+
+        max-width: 770px;
+        background-color: var(--main-background);
+        opacity: 0.9;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media (max-width: $bp-tablet) {
+            width: 100%;
+            flex-direction: column;
+            gap: 20px;
+            position: static;
+            transform: translateY(0);
+            padding: 0;
+        }
+    }
+
+    &-metrics {
+        @include flex(column, center, center);
+        gap: 80px;
+        flex: 0.8;
+
+        @media (max-width: $bp-tablet) {
+            width: 100%;
+            gap: 10px;
+            justify-content: space-between;
+        }
+        
+        &__item {
+            position: relative;
+            &:not(:last-child)::after {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 1px;
+                background-color: $stat-line;
+                position: absolute;
+                bottom: -40px;
+                left: 50%;
+                transform: translate(-50%);
+
+                @media (max-width: $bp-tablet) {
+                    display: none;
+                }
+
+            }
+        }
+    }
+
+    &-count {
+        display: block;
+        line-height: 68px;
+        @include font("Playfair Display", 400, clamp(40px, 5vw, 68px));
+        color: var(--text-color);
+
+
+        >span {
+            font-size: clamp(30px, 5vw,40px);
+            color: $base-line;
+            margin-right: 10px;
+        }
+    }
+
+    &-subtext {
+        display: block;
+        margin-top: 12px;
+        text-align: center;
+
+        @media (max-width: $bp-tablet) {
+                color: #fff;
+            }
+
+        @media (max-width: $bp-tablet) {
+                color: var(--text-color);
+        }
+    }
+    &-desc {
+        flex: 1;
+        @include flex(column, flex-start, flex-start);
+        gap: 50px;
+
+        @media (max-width: $bp-tablet) {
+            background-color: var(--benefits-bg);
+            padding: 20px;
+            gap: 20px;
+        }
+    }
+
+    &-text {
+        @include flex(column, flex-start, flex-start);
+        gap: 40px;
+
+        @media (max-width: $bp-tablet) {
+            gap: 20px;
+        }
+    }
+}

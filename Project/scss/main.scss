@@ -1,0 +1,25 @@
+@use "./utils/vars" as *;
+@use "./utils/mixins" as *;
+@use "./base/modern-reset";
+@use "./base/fonts";
+@use "./base/typography";
+@use "./base/base";
+@use "./utils/helpers";
+@use "./components/button";
+@use "./components/theme-btn";
+
+
+@use "./main/hero";
+@use "./main/stats";
+@use "./main/features";
+@use "./main/quote";
+@use "./main/video";
+@use "./main/benefits";
+@use "./main/reviews";
+@use "./main/contacts";
+@use "./components/burger";
+
+
+@use "./layout/header";
+@use "./layout/footer";
+

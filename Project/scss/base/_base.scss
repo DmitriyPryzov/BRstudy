@@ -1,0 +1,31 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+body {
+    width: 100%;
+    position: relative;
+    background-color: var(--main-background);
+    transition: all 0.3s;
+}
+
+main {
+    background-image: var(--main-img);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all 0.3s;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: var(--text-color);
+    @include font("Lato", 400, 14px);
+    transition: all 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+}

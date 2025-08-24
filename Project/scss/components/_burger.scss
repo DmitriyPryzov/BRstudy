@@ -1,0 +1,63 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.burger {
+    width: 34px;
+    height: 2px;
+
+    background-color: var(--text-color);
+    position: relative;
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: $bp-tablet) {
+        display: block;
+    }
+
+    &::before {
+        content: "";
+        width: 34px;
+        height: 2px;
+        display: block;
+        background-color: var(--text-color);
+        position: absolute;
+        top: -10px;
+        left: 0;
+    }
+
+    &::after {
+        content: "";
+        width: 34px;
+        height: 2px;
+        display: block;
+        background-color: var(--text-color);
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+}
+
+#burger-check:checked ~ .header-nav-container {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.burger,
+.burger::before,
+.burger::after {
+  transition: all 0.3s ease;
+}
+
+#burger-check:checked + .burger {
+  background-color: transparent;
+}
+
+#burger-check:checked + .burger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+#burger-check:checked + .burger::after {
+  top: 0;
+  transform: rotate(-45deg);
+}

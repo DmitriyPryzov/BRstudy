@@ -1,0 +1,41 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.main-title {
+    @include font("Playfair Display", 400, clamp(30px, 5vw, 44px));
+    color: var(--text-color);
+    line-height: 52px;
+}
+
+.title {
+    @include font("Playfair Display", 400, clamp(25px, 5vw, 40px));
+    line-height: 48px;
+    color: var(--text-color);
+}
+
+.main-text {
+    @include font("Lato", 300, clamp(15px, 2vw, 18px));
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+.block-text {
+    @include font("Lato", 400, clamp(14px, 2vw, 16px));
+    color: var(--review-text-color);    
+}
+
+.autor-text {
+    @include font("Playfair Display", 400);
+    font-style: italic;
+    color: var(--review-text-color);
+}
+
+.nav-text {
+    @include font("Lato", 400, 14px);
+    color: var(--text-color);
+}
+
+.italic-text {
+    font-style: italic;
+    color: var(--italic-text-color);
+}

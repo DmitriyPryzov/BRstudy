@@ -1,0 +1,100 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.header {
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+    width: 100%;
+    padding: 24px 0;
+
+    @media (max-width: $bp-tablet) {
+        padding: 15px 0;
+    }
+
+    &-backdrop {
+       background: var(--header-gradient);
+       backdrop-filter: blur(4px); 
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: 0;
+    }
+
+    &-wrap {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        @include flex(row, space-between, center);
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav-block {
+        @include flex();
+        gap: clamp(20px, 10vw, 80px);
+    }
+
+
+
+    &-nav-container {
+
+        display: flex;
+        gap: 80px;
+
+            @media (max-width: $bp-tablet) {
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+                transition: max-height 0.4s ease, opacity 0.3s ease;
+                background-color: var(--main-background);
+                position: absolute;
+                right: -30px;
+                top: 46px;
+                width: 200px;
+                padding: 50px;
+                transition: all 0.2s;
+                box-sizing: border-box;
+            }        
+    }
+
+    &-nav-list {
+        @include flex(row, center, center);
+        list-style: none;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+
+        @media (max-width: $bp-tablet) {
+            @include flex(column, flex-start, center);
+
+        }
+    }
+
+    &-nav__item {
+        position: relative;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: var(--nav-underline);
+            position: absolute;
+            bottom: 0;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+                transition: all 0.2;
+            }
+        }
+    }
+}

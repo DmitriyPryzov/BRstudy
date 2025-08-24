@@ -1,0 +1,50 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.quote {
+    &-wrap {
+        width: 100%;
+        min-height: 400px;
+        background: url("../assets/img/quote-background.webp") no-repeat;
+        padding: 0 clamp(40px, 10vw, 120px);
+        @include flex(row, flex-start, center);
+
+        @media (max-width: $bp-tablet) {
+            min-height: 300px;
+            
+        }
+    }
+
+    &-block {
+        position: relative;
+
+        &::before {
+            content: "";
+            width: clamp(70px, 5vw, 100px);
+            height: 80px;
+            background: url("../assets/img/quote.svg") no-repeat center;
+            background-size: contain;
+            display: block;
+            position: absolute;
+            top: -30px;
+            left: -50px;
+
+            @media (max-width: $bp-mobile) {
+                top: -45px;
+                left: -25px;
+            }
+        }
+    }
+
+    &-text {
+        @include font("Lato", 400, 32px);
+        font-size: clamp(14px, 2vw, 32px);
+        max-width: 650px;
+    }
+
+    &-autor {
+        letter-spacing: 2px;
+        display: block;
+        margin-top: 40px;
+    }
+}

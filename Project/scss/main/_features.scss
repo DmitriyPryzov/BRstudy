@@ -1,0 +1,32 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.features {
+    &-wrap {
+        column-gap: 30px;
+        row-gap: 110px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media (max-width: $bp-tablet) {
+            grid-template-columns: 1fr;
+            row-gap: 50px;
+        }
+    }
+
+    &__item {
+        padding: 50px 35px 0 35px;
+        width: 100%;
+        flex: 1;
+        border-top: 1px solid $base-line;
+
+        > p {
+            margin-top: 30px;
+        }
+
+
+        @media (max-width: $bp-tablet) {
+            padding: 30px 25px 0 25px;
+        }
+    }
+}

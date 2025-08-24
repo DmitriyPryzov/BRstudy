@@ -1,0 +1,37 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.footer {
+    &-wrap {
+        padding: 30px 0;
+        @include flex(row, space-between, center);
+        gap: 20px;
+        flex-wrap: wrap;
+        @include font("Lato", 300, 14px);
+        color: var(--text-color);
+
+        a {
+            font-weight: 400;
+            
+            &:hover {
+                color: var(--italic-text-color);
+                transition: all 0.3s;
+            }
+        }
+
+        @media (max-width: $bp-tablet) {
+            justify-content: center;    
+        }
+    }
+
+    &-creator {
+        display: flex;
+        gap: 12px;
+    }
+
+    &-policy {
+       display: flex;
+       gap: 32px; 
+    }
+
+}
